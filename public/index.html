@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music player</title>
+    <link rel="stylesheet" href="app.css" />
+    <script
+      src="https://kit.fontawesome.com/1425df3f40.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body class="">
+    <div
+      class="mini-container w-full h-[100vh] bg-[#333] flex justify-center items-center flex-wrap"
+    >
+      <div
+        class="music-player bg-[#FFe0e5] w-[400px] py-[25px] px-[30px] text-center"
+      >
+        <nav class="flex justify-between mb-[30px]">
+          <div
+            class="circle w-10 h-10 bg-white rounded-[50%] text-[#f53192] leading-10 shadow-normal"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div
+            class="circle w-10 h-10 bg-white rounded-[50%] text-[#f53192] leading-10 shadow-normal"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <img
+          class="ml-[60px] song-image w-[220px] h-[220px] rounded-[50%] shadow-middum border-[8px] border-white"
+          src="images/musicImage.jpg"
+          alt=""
+        />
+        <h1 class="song-name text-[20px] font-[400] mt-5 text-[#333]">
+          Desperate
+        </h1>
+        <p class="singer text-[#333] text-[14px]">Neffex ft. NCS</p>
+        <audio class="song">
+          <source
+            src="music/NEFFEX_x_NCS_-_DESPERATE_⛓__Copyright-Free__No.203(256k).mp3"
+            type="audio/mpeg"
+            class="sourceSong"
+          />
+        </audio>
+        <input
+          class="appearance appearance-none w-full h-[6px] bg-[#f53192] rounded-[4px] cursor-pointer my-10 progress"
+          type="range"
+          value="0"
+        />
+
+        <div class="controls flex justify-center items-center">
+          <div
+            class="w-[60px] h-[60px] m-5 bg-white rounded-[50%] text-[#f53192] leading-10 shadow-playControll text-center inline-flex items-center justify-center cursor-pointer"
+          >
+            <i class="fa-solid fa-backward backward-icon"></i>
+          </div>
+          <div
+            class="w-[60px] h-[60px] scale-[1.5] m-5 bg-[#f53192] rounded-[50%] text-white leading-10 shadow-playControll inline-flex items-center justify-center cursor-pointer"
+            onclick="playPause()"
+          >
+            <i class="fa-solid fa-play ctrlIcon"> </i>
+          </div>
+          <div
+            class="w-[60px] h-[60px] m-5 bg-white rounded-[50%] text-[#f53192] leading-10 shadow-playControll inline-flex items-center justify-center cursor-pointer"
+          >
+            <i class="fa-solid fa-forward forwardIcon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
